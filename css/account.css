@@ -1,0 +1,17 @@
+.avatar{
+    width: 100px;
+    height: 100px;
+}
+
+.pic{
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}

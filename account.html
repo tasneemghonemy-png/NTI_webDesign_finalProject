@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <!--fontawesome-->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <!-- my style -->
+    <link rel="stylesheet" href="css/account.css">
+
+</head>
+
+<body>
+
+    <div class="py-4 py-md-5 text-center">
+
+        <h1 class="fw-bold display-5">My Account</h1>
+
+    </div>
+
+
+    <div class="container my-5">
+
+        <div class="row g-4 align-items-start">
+
+            <!-- Profile -->
+
+            <div class="col-12 col-md-4 card border-0 bg-light p-3">
+
+                <div class="card-body text-center">
+
+                    <div class="position-relative avatar mx-auto mb-3">
+
+                        <i id="profileIcon"
+                            class="fa-duotone fa-solid fa-circle-user fa-6x position-absolute top-50 start-50 translate-middle opacity-25">
+                        </i>
+
+                        <img class="rounded-circle d-none" id="profileImage">
+
+                        <label for="profilePic"
+                            class="position-absolute bottom-0 end-0 bg-white rounded-circle border border-2 border-white p-0 d-flex align-items-center justify-content-center pic">
+
+                            <i class="fa-sharp fa-solid fa-circle-plus opacity-100 fs-4"></i>
+
+                        </label>
+
+                    </div>
+
+
+                    <h5 class="fw-bold mb-4" id="sliderName">
+                        Sofia Havertz
+                    </h5>
+
+                    <input type="file" class="d-none" id="profilePic">
+
+
+                    <!-- mobile menu -->
+
+                    <div class="d-md-none mb-3">
+
+                        <select id="accountMenu" class="form-select fw-semibold">
+
+                            <option value="account" selected>Account</option>
+
+                            <option value="address">Address</option>
+
+                            <option value="orders">Orders</option>
+
+                            <option value="wishlist">Wishlist</option>
+
+                            <option value="logout">Log Out</option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- large screen menu -->
+
+                    <ul class="list-unstyled text-start d-none d-md-block m-0">
+
+                        <li class="py-2 border-bottom fw-bold">
+
+                            <a href="account.html"
+                                class="text-decoration-none text-dark">
+                                Account
+                            </a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="address.html"
+                                class="text-decoration-none text-secondary">
+                                Address
+                            </a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="orders.html"
+                                class="text-decoration-none text-secondary">
+                                Orders
+                            </a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="wishlist.html"
+                                class="text-decoration-none text-secondary">
+                                Wishlist
+                            </a>
+
+                        </li>
+
+                        <li class="py-2">
+
+                            <a href="#"
+                                class="text-decoration-none text-secondary">
+                                Log Out
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Account Details -->
+
+            <div class="col-12 col-md-8">
+
+                <div class="card border-0">
+
+                    <div class="card-body">
+
+                        <h3 class="mb-4 fw-bold">
+                            Account Details
+                        </h3>
+
+
+                        <form id="accountForm">
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    First Name *
+                                </label>
+
+                                <input type="text"
+                                    id="firstName"
+                                    class="form-control"
+                                    placeholder="First name">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    Last Name *
+                                </label>
+
+                                <input type="text"
+                                    id="lastName"
+                                    class="form-control"
+                                    placeholder="Last name">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    Display Name *
+                                </label>
+
+                                <input type="text"
+                                    id="displayName"
+                                    class="form-control"
+                                    placeholder="Display name">
+
+                                <small class="text-danger"></small>
+
+                                <small class="text-muted fst-italic">
+                                    This will be how your name will be displayed in the account section and in reviews
+                                </small>
+
+                            </div>
+
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    Email *
+                                </label>
+
+                                <input type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Email">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <h4 class="mb-4 mt-5 fw-bold">
+                                Password
+                            </h4>
+
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    Old Password
+                                </label>
+
+                                <input type="password"
+                                    id="oldPassword"
+                                    class="form-control"
+                                    placeholder="Old password">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <div class="mb-3">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    New Password
+                                </label>
+
+                                <input type="password"
+                                    id="newPassword"
+                                    class="form-control"
+                                    placeholder="New password">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <div class="mb-4">
+
+                                <label class="form-label text-uppercase fs-7 text-muted fw-semibold">
+                                    Repeat New Password
+                                </label>
+
+                                <input type="password"
+                                    id="repeatPassword"
+                                    class="form-control"
+                                    placeholder="Repeat new password">
+
+                                <small class="text-danger"></small>
+
+                            </div>
+
+
+
+                            <div>
+
+                                <input type="submit"
+                                    value="Save changes"
+                                    class="btn btn-dark px-4 py-2">
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- bootstrap js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous">
+    </script>
+
+
+    <!-- my js -->
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
