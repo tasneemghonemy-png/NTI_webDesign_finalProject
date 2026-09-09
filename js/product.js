@@ -27,12 +27,9 @@ thumbnails.forEach((image) => {
 })
 
 
-
 let wishlist = document.getElementById("wishlist")
-
 wishlist.addEventListener("click", () => {
-
-    if (wishlist.innerText == "♡ Wishlist") {ض
+    if (wishlist.innerText == "♡ Wishlist") {
         wishlist.innerText = "♥ Wishlist"
         wishlist.classList.add("text-danger")
     }
@@ -89,3 +86,69 @@ writeReviewBtn.addEventListener("click", () => {
     reviewInput.value = ""
 
 })
+
+
+let addToCartBtn = document.getElementById("addToCart")
+let cartNumber = document.getElementById("cartNumber")
+let cartCount = 0
+
+addToCartBtn.addEventListener("click", () => {
+    cartCount++
+    cartNumber.innerText = cartCount
+})
+
+
+
+
+let days = document.getElementById("days")
+let hours = document.getElementById("hours")
+let minutes = document.getElementById("minutes")
+let seconds = document.getElementById("seconds")
+
+let second = 5
+let minute = 45
+let hour = 12
+let day = 2
+
+let timer = setInterval(() => {
+    second--
+    if (second < 0) {
+        second = 59
+        minute--
+    }
+
+    if (minute < 0) {
+        minute = 59
+        hour--
+    }
+
+    if (hour < 0) {
+        hour = 23
+        day--
+    }
+
+    if (day < 0) {
+        clearInterval(timer)
+    }
+
+    if (second < 10)
+        seconds.innerText = "0" + second
+    else
+        seconds.innerText = second
+
+    if (minute < 10)
+        minutes.innerText = "0" + minute
+    else
+        minutes.innerText = minute
+
+    if (hour < 10)
+        hours.innerText = "0" + hour
+    else
+        hours.innerText = hour
+
+    if (day < 10)
+        days.innerText = "0" + day
+    else
+        days.innerText = day
+
+}, 1000)
