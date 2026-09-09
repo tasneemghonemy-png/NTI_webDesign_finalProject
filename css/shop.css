@@ -5,6 +5,25 @@
 }
 
 /* Custome style */
+
+/* ================= cart ================ */
+.form-check-input {
+    background-color: white;
+    border: 1.5px solid #6c757d;
+}
+
+.form-check-input:checked {
+    background-color: black !important;
+    border-color: #000 !important;
+    box-shadow: none;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+    border-color: #000;
+}
+
+/* ================= shop ================ */
 .bg-img {
     background-image: url(../images/shop_bg.jpeg);
     background-repeat: no-repeat;
@@ -13,27 +32,32 @@
     background-position: top left;
 }
 
-.product-card .cart-btn, i{
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s;
+.product-card .cart-btn,
+.badges i {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: all .3s !important;
 }
 
-.product-card:hover .cart-btn{
-    opacity: 1;
-    visibility: visible;
+.product-card:hover .cart-btn {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
-.product-card:hover i{
-    opacity: 1;
-    visibility: visible;
+
+.product-card:hover .badges i {
+    opacity: 1 !important;
+    visibility: visible !important;
 }
-.accordion .col .accordion-item .accordion-collapse .accordion-body .list-group .filter-cat-Item:hover{
-    cursor:pointer
+
+.accordion .col .accordion-item .accordion-collapse .accordion-body .list-group .filter-cat-Item:hover {
+    cursor: pointer !important
 }
-.accordion .col .accordion-item .accordion-collapse .accordion-body .list-group .filter-price-Item:hover{
-    cursor:pointer
+
+.accordion .col .accordion-item .accordion-collapse .accordion-body .list-group .filter-price-Item:hover {
+    cursor: pointer !important
 }
-.w-h-40{
+
+.w-h-40 {
     width: 35px;
     height: 35px;
 }
